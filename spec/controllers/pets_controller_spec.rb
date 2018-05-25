@@ -93,7 +93,7 @@ describe "Pets Controller" do
       visit "/pets/#{@pet.id}/edit"
       binding.pry
       choose(@adam.id)
-      
+
       click_button "Update Pet"
       expect(Pet.last.owner.name).to eq("Adam")
     end
